@@ -12,10 +12,10 @@ import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-ink text-cream">
+    <div className="min-h-screen overflow-x-hidden bg-paper text-charcoal">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-gold focus:px-5 focus:py-3 focus:font-heading focus:text-sm focus:font-medium focus:text-ink focus:outline-none"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-[4px] focus:bg-ketchup focus:px-5 focus:py-3 focus:font-heading focus:text-sm focus:font-bold focus:text-white focus:outline-none"
       >
         跳至主要內容
       </a>

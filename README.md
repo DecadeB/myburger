@@ -1,6 +1,21 @@
 # MyBurger — Everyday Burger
 
-Single-page marketing site for **MyBurger**, a burger restaurant brand. Built with **React 19** (functional components + hooks) and **Tailwind CSS v4** — all styling is utility classes; `src/index.css` contains only the Tailwind import and design tokens (colors, fonts, shadow), no hand-written rules.
+Single-page marketing site for **MyBurger**, a burger restaurant brand. Built with **React 19** (functional components + hooks) and **Tailwind CSS v4** — all styling is utility classes; `src/index.css` contains only the Tailwind import and design tokens, no hand-written rules.
+
+## Design language
+
+Visual system follows **McDonald's Hong Kong** (mcdonalds.com.hk): white surfaces, charcoal text, red accents and yellow call-to-action buttons with black text.
+
+| Token | Value | Usage |
+| --- | --- | --- |
+| `ketchup` | `#db0007` | accents, badges, featured border, links |
+| `mustard` | `#ffbc0d` (hover `#ffcc49`) | primary buttons, price stickers, stars |
+| `charcoal` | `#292929` (dark bar) | headings, text, footer bottom bar |
+| `smoke` / `line` | `#6f6f6f` / `#d6d6d6` | secondary text, borders |
+| `cloud` / `mist` | `#f5f5f5` / `#f7f7f7` | alternating section backgrounds |
+
+Buttons are 4px-radius, 48px height (McDonald's spec); cards use 10px radius with soft `0 4px 12px` shadows. The hero is an auto-playing promo carousel with dots/arrows (pauses on hover/focus, respects `prefers-reduced-motion`).
+
 
 ## Quick start
 
@@ -40,10 +55,11 @@ src/
 
 ## Customizing
 
-- **Copy & data**: edit `src/data/site.js` — components read everything from there.
-- **Colors / fonts**: tokens live in `src/index.css` under `@theme` (`ink #0B0B0F`, `cream #F5F0E6`, `gold #C9A84C`; Inter for headings, Manrope for body, Noto Sans TC for Chinese).
+- **Copy & data**: edit `src/data/site.js` — components read everything from there (including hero slides).
+- **Colors / fonts**: tokens live in `src/index.css` under `@theme` (McDonald's HK palette: `#db0007` / `#ffbc0d` / `#292929`; Inter for headings, Manrope for body, Noto Sans TC for Chinese).
 - **Map**: `Location.jsx` embeds Google Maps via `output=embed` (no API key needed). Swap `brand.mapQuery` for a real address.
 - **Form**: front-end demo only — wire `Contact.jsx#handleSubmit` to your backend or a form service.
+- **QA**: `npm run qa` runs the Playwright suite in `scripts/qa.mjs` against `http://127.0.0.1:4173` (start `npm run preview` first). Checks broken images, layout overflow, clipped text, dead anchors, tap-target sizes, text contrast, carousel/menu/accordion/form interactions across 375 / 768 / 1280 px.
 
 ## Notes
 

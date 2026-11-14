@@ -18,7 +18,7 @@ const initialValues = {
 };
 
 const fieldBase =
-  "w-full rounded-2xl border bg-cream/[0.03] px-4 py-3.5 text-sm text-cream placeholder:text-cream/25 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/30";
+  "w-full rounded-[4px] border bg-paper px-4 py-3.5 text-sm text-charcoal placeholder:text-charcoal/35 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ketchup/25";
 
 function validate(values) {
   const errors = {};
@@ -73,14 +73,14 @@ export default function Contact() {
 
   const inputClass = (field) =>
     `${fieldBase} ${
-      errors[field] ? "border-red-400/60" : "border-cream/15 focus:border-gold"
+      errors[field] ? "border-ketchup" : "border-line focus:border-ketchup"
     }`;
 
   return (
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="scroll-mt-24 py-24 md:py-32"
+      className="scroll-mt-24 py-20 md:py-28"
     >
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 md:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
@@ -97,17 +97,17 @@ export default function Contact() {
             description="訂位、外帶、派對外燴或企業餐盒，填寫表單或直接來電都可以。工作時段內，我們通常 1 小時內回覆。"
           />
 
-          <Reveal as="div" delay={140} className="mt-10 space-y-5">
+          <Reveal as="div" delay={140} className="mt-10 space-y-4">
             <a
               href={brand.phoneHref}
-              className="group flex items-center gap-4 rounded-2xl border border-cream/10 bg-cream/[0.02] px-5 py-4 transition-colors duration-300 hover:border-gold/40 hover:bg-cream/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+              className="group flex items-center gap-4 rounded-[10px] border border-line bg-paper px-5 py-4 shadow-card transition-colors duration-200 hover:border-ketchup focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ketchup focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
             >
-              <Phone className="h-5 w-5 shrink-0 text-gold" />
+              <Phone className="h-5 w-5 shrink-0 text-ketchup" />
               <span>
-                <span className="block text-[10px] uppercase tracking-[0.22em] text-cream/40">
+                <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-smoke">
                   Call us
                 </span>
-                <span className="mt-1 block text-sm text-cream/80 group-hover:text-cream">
+                <span className="mt-1 block text-sm font-semibold text-charcoal">
                   {brand.phone}
                 </span>
               </span>
@@ -115,26 +115,26 @@ export default function Contact() {
 
             <a
               href={`mailto:${brand.email}`}
-              className="group flex items-center gap-4 rounded-2xl border border-cream/10 bg-cream/[0.02] px-5 py-4 transition-colors duration-300 hover:border-gold/40 hover:bg-cream/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+              className="group flex items-center gap-4 rounded-[10px] border border-line bg-paper px-5 py-4 shadow-card transition-colors duration-200 hover:border-ketchup focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ketchup focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
             >
-              <Mail className="h-5 w-5 shrink-0 text-gold" />
+              <Mail className="h-5 w-5 shrink-0 text-ketchup" />
               <span>
-                <span className="block text-[10px] uppercase tracking-[0.22em] text-cream/40">
+                <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-smoke">
                   Email
                 </span>
-                <span className="mt-1 block text-sm text-cream/80 group-hover:text-cream">
+                <span className="mt-1 block text-sm font-semibold text-charcoal">
                   {brand.email}
                 </span>
               </span>
             </a>
 
-            <div className="flex items-start gap-4 rounded-2xl border border-cream/10 bg-cream/[0.02] px-5 py-4">
-              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+            <div className="flex items-start gap-4 rounded-[10px] border border-line bg-paper px-5 py-4 shadow-card">
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-ketchup" />
               <span>
-                <span className="block text-[10px] uppercase tracking-[0.22em] text-cream/40">
+                <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-smoke">
                   Visit
                 </span>
-                <span className="mt-1 block text-sm leading-relaxed text-cream/80">
+                <span className="mt-1 block text-sm font-semibold leading-relaxed text-charcoal">
                   {brand.address}
                 </span>
               </span>
@@ -144,17 +144,17 @@ export default function Contact() {
 
         <Reveal
           delay={80}
-          className="rounded-[1.75rem] border border-cream/10 bg-cream/[0.02] p-6 sm:p-8 md:p-10"
+          className="rounded-[10px] border border-line bg-paper p-6 shadow-card sm:p-8 md:p-10"
         >
           {status === "success" ? (
             <div role="status" aria-live="polite" className="flex h-full flex-col items-start justify-center py-8">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-gold">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-ketchup text-white">
                 <Check className="h-6 w-6" />
               </span>
-              <h3 className="mt-6 font-heading text-2xl font-semibold tracking-tight text-cream">
+              <h3 className="mt-6 font-heading text-2xl font-bold tracking-tight text-charcoal">
                 收到了，謝謝你。
               </h3>
-              <p className="mt-3 max-w-sm text-sm leading-relaxed text-cream/60">
+              <p className="mt-3 max-w-sm text-sm leading-relaxed text-smoke">
                 我們已收到你的需求，會在 1 個工作天內以電話或 Email 與你聯繫。若是當日訂位，建議直接來電 {brand.phone}。
               </p>
               <Button
@@ -171,8 +171,8 @@ export default function Contact() {
             <form onSubmit={handleSubmit} noValidate className="space-y-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="contact-name" className="mb-2 block text-xs text-cream/60">
-                    姓名 <span className="text-gold">*</span>
+                  <label htmlFor="contact-name" className="mb-2 block text-xs font-semibold text-charcoal/75">
+                    姓名 <span className="text-ketchup">*</span>
                   </label>
                   <input
                     id="contact-name"
@@ -187,15 +187,15 @@ export default function Contact() {
                     className={inputClass("name")}
                   />
                   {errors.name ? (
-                    <p id="contact-name-error" className="mt-2 text-xs text-red-400">
+                    <p id="contact-name-error" className="mt-2 text-xs font-semibold text-ketchup">
                       {errors.name}
                     </p>
                   ) : null}
                 </div>
 
                 <div>
-                  <label htmlFor="contact-email" className="mb-2 block text-xs text-cream/60">
-                    Email <span className="text-gold">*</span>
+                  <label htmlFor="contact-email" className="mb-2 block text-xs font-semibold text-charcoal/75">
+                    Email <span className="text-ketchup">*</span>
                   </label>
                   <input
                     id="contact-email"
@@ -210,15 +210,15 @@ export default function Contact() {
                     className={inputClass("email")}
                   />
                   {errors.email ? (
-                    <p id="contact-email-error" className="mt-2 text-xs text-red-400">
+                    <p id="contact-email-error" className="mt-2 text-xs font-semibold text-ketchup">
                       {errors.email}
                     </p>
                   ) : null}
                 </div>
 
                 <div>
-                  <label htmlFor="contact-phone" className="mb-2 block text-xs text-cream/60">
-                    電話 <span className="text-cream/30">（選填）</span>
+                  <label htmlFor="contact-phone" className="mb-2 block text-xs font-semibold text-charcoal/75">
+                    電話 <span className="text-charcoal/40">（選填）</span>
                   </label>
                   <input
                     id="contact-phone"
@@ -233,14 +233,14 @@ export default function Contact() {
                     className={inputClass("phone")}
                   />
                   {errors.phone ? (
-                    <p id="contact-phone-error" className="mt-2 text-xs text-red-400">
+                    <p id="contact-phone-error" className="mt-2 text-xs font-semibold text-ketchup">
                       {errors.phone}
                     </p>
                   ) : null}
                 </div>
 
                 <div>
-                  <label htmlFor="contact-topic" className="mb-2 block text-xs text-cream/60">
+                  <label htmlFor="contact-topic" className="mb-2 block text-xs font-semibold text-charcoal/75">
                     需求類型
                   </label>
                   <div className="relative">
@@ -252,19 +252,17 @@ export default function Contact() {
                       className={`${inputClass("topic")} appearance-none pr-11`}
                     >
                       {topics.map((topic) => (
-                        <option key={topic} value={topic} className="bg-ink text-cream">
+                        <option key={topic} value={topic} className="bg-paper text-charcoal">
                           {topic}
                         </option>
                       ))}
                     </select>
-                    <ChevronDown
-                      className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-cream/50"
-                    />
+                    <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-charcoal/50" />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="contact-people" className="mb-2 block text-xs text-cream/60">
+                  <label htmlFor="contact-people" className="mb-2 block text-xs font-semibold text-charcoal/75">
                     人數
                   </label>
                   <input
@@ -281,21 +279,21 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="contact-date" className="mb-2 block text-xs text-cream/60">
-                    希望日期 <span className="text-cream/30">（選填）</span>
+                  <label htmlFor="contact-date" className="mb-2 block text-xs font-semibold text-charcoal/75">
+                    希望日期 <span className="text-charcoal/40">（選填）</span>
                   </label>
                   <input
                     id="contact-date"
                     name="date"
                     type="date"
-                    className={`${inputClass("date")} scheme-dark`}
+                    className={inputClass("date")}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="contact-message" className="mb-2 block text-xs text-cream/60">
-                  想告訴我們的事 <span className="text-gold">*</span>
+                <label htmlFor="contact-message" className="mb-2 block text-xs font-semibold text-charcoal/75">
+                  想告訴我們的事 <span className="text-ketchup">*</span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -309,14 +307,14 @@ export default function Contact() {
                   className={`${inputClass("message")} resize-y`}
                 />
                 {errors.message ? (
-                  <p id="contact-message-error" className="mt-2 text-xs text-red-400">
+                  <p id="contact-message-error" className="mt-2 text-xs font-semibold text-ketchup">
                     {errors.message}
                   </p>
                 ) : null}
               </div>
 
               <div>
-                <label htmlFor="contact-consent" className="flex items-start gap-3 text-xs leading-relaxed text-cream/55">
+                <label htmlFor="contact-consent" className="flex items-start gap-3 text-xs leading-relaxed text-smoke">
                   <input
                     id="contact-consent"
                     name="consent"
@@ -325,14 +323,14 @@ export default function Contact() {
                     onChange={update("consent")}
                     aria-invalid={Boolean(errors.consent)}
                     aria-describedby={errors.consent ? "contact-consent-error" : undefined}
-                    className="mt-0.5 h-4 w-4 shrink-0 rounded border-cream/30 bg-transparent accent-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                    className="mt-0.5 h-4 w-4 shrink-0 rounded-[3px] border-line accent-ketchup focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ketchup focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
                   />
                   <span>
                     我同意 MyBurger 依隱私權政策使用上述資料，僅用於回覆此次需求。
                   </span>
                 </label>
                 {errors.consent ? (
-                  <p id="contact-consent-error" className="mt-2 text-xs text-red-400">
+                  <p id="contact-consent-error" className="mt-2 text-xs font-semibold text-ketchup">
                     {errors.consent}
                   </p>
                 ) : null}
@@ -347,10 +345,10 @@ export default function Contact() {
                 aria-busy={status === "submitting"}
               >
                 {status === "submitting" ? "傳送中…" : "送出需求"}
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Button>
 
-              <p className="text-center text-[11px] leading-relaxed text-cream/30">
+              <p className="text-center text-[11px] leading-relaxed text-smoke">
                 送出後不會即時保留座位，我們會盡快與你確認。
               </p>
             </form>

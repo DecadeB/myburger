@@ -25,9 +25,9 @@ export default function SectionHeading({
       {eyebrow ? (
         <Reveal
           as="p"
-          className="flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.28em] text-gold"
+          className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-ketchup"
         >
-          <span aria-hidden="true" className="h-px w-8 bg-gold/60" />
+          <span aria-hidden="true" className="h-1 w-6 rounded-full bg-ketchup" />
           {eyebrow}
         </Reveal>
       ) : null}
@@ -41,7 +41,7 @@ export default function SectionHeading({
           as="p"
           delay={120}
           className={[
-            "max-w-2xl text-pretty text-[15px] leading-relaxed text-cream/60 sm:text-base",
+            "max-w-2xl text-pretty text-[15px] leading-relaxed text-smoke sm:text-base",
             centered ? "mx-auto" : "",
           ].join(" ")}
         >

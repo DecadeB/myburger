@@ -94,6 +94,22 @@ export function ChevronDown({ className }) {
   );
 }
 
+export function ChevronLeft({ className }) {
+  return (
+    <Svg className={className}>
+      <path d="m14.5 5.5-7 6.5 7 6.5" />
+    </Svg>
+  );
+}
+
+export function ChevronRight({ className }) {
+  return (
+    <Svg className={className}>
+      <path d="m9.5 5.5 7 6.5-7 6.5" />
+    </Svg>
+  );
+}
+
 export function Menu({ className }) {
   return (
     <Svg className={className}>

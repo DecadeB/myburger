@@ -9,7 +9,7 @@ export default function Pricing() {
     <section
       id="pricing"
       aria-labelledby="pricing-title"
-      className="relative scroll-mt-24 overflow-hidden border-y border-cream/10 bg-cream/[0.015] py-24 md:py-32"
+      className="scroll-mt-24 border-y border-line bg-cloud py-20 md:py-28"
     >
       <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
         <SectionHeading
@@ -21,7 +21,7 @@ export default function Pricing() {
           className="mx-auto"
         />
 
-        <div className="mt-14 grid items-stretch gap-5 md:grid-cols-3">
+        <div className="mt-14 grid items-stretch gap-6 md:grid-cols-3">
           {plans.map((plan, index) => (
             <Reveal
               as="article"
@@ -29,41 +29,42 @@ export default function Pricing() {
               delay={index * 90}
               aria-labelledby={`plan-${plan.id}`}
               className={[
-                "group relative flex h-full flex-col rounded-[1.5rem] border p-7 transition-all duration-500 sm:p-8",
+                "group relative flex h-full flex-col rounded-[10px] border bg-paper p-7 shadow-card transition-all duration-300 sm:p-8",
                 plan.featured
-                  ? "border-gold/50 bg-gradient-to-b from-gold/[0.09] via-cream/[0.02] to-transparent shadow-[0_0_70px_-30px_rgba(201,168,76,0.55)]"
-                  : "border-cream/10 bg-ink/40 hover:-translate-y-1 hover:border-cream/25 motion-reduce:hover:translate-y-0",
+                  ? "border-2 border-ketchup"
+                  : "border-line hover:-translate-y-1 hover:shadow-pop motion-reduce:hover:translate-y-0",
               ].join(" ")}
             >
               {plan.featured ? (
-                <span className="absolute -top-3 left-7 inline-flex items-center gap-1.5 rounded-full bg-gold px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-[0.16em] text-ink">
+                <span className="absolute -top-3.5 left-7 inline-flex items-center gap-1.5 rounded-[4px] bg-ketchup px-3 py-1.5 font-heading text-[11px] font-bold uppercase tracking-[0.14em] text-white">
                   最受歡迎
                 </span>
               ) : null}
 
-              <p className="text-[10px] font-medium uppercase tracking-[0.26em] text-cream/40">
+              <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-ketchup">
                 {plan.label}
               </p>
               <h3
                 id={`plan-${plan.id}`}
-                className="mt-3 font-heading text-xl font-semibold tracking-tight text-cream"
+                className="mt-3 font-heading text-xl font-bold tracking-tight text-charcoal"
               >
                 {plan.name}
               </h3>
-              <p className="mt-1.5 text-sm text-cream/50">{plan.summary}</p>
+              <p className="mt-1.5 text-sm text-smoke">{plan.summary}</p>
 
-              <p className="mt-6 flex items-end gap-2 border-b border-cream/10 pb-6">
-                <span className="font-heading text-xs tracking-[0.12em] text-cream/45">NT$</span>
-                <span className="font-heading text-4xl font-semibold leading-none tracking-tight text-cream">
+              <p className="mt-6 flex flex-wrap items-end gap-x-2 gap-y-1 border-b border-line pb-6">
+                <span className="font-heading text-xs font-bold tracking-[0.1em] text-smoke">NT$</span>
+                <span className="font-heading text-4xl font-bold leading-none tracking-tight text-charcoal">
                   {plan.price.toLocaleString("en-US")}
                 </span>
-                <span className="whitespace-nowrap pb-1 text-xs text-cream/45">{plan.unit}</span>              </p>
+                <span className="whitespace-nowrap pb-1 text-xs text-smoke">{plan.unit}</span>
+              </p>
 
               <ul className="mt-6 flex-1 space-y-3.5">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm leading-relaxed text-cream/70">
+                  <li key={feature} className="flex items-start gap-3 text-sm leading-relaxed text-charcoal/85">
                     <Check
-                      className={`mt-0.5 h-4 w-4 shrink-0 ${plan.featured ? "text-gold" : "text-cream/35"}`}
+                      className={`mt-0.5 h-4 w-4 shrink-0 ${plan.featured ? "text-ketchup" : "text-smoke"}`}
                     />
                     <span>{feature}</span>
                   </li>
@@ -85,7 +86,7 @@ export default function Pricing() {
         <Reveal
           as="p"
           delay={120}
-          className="mt-8 text-center text-xs leading-relaxed text-cream/35"
+          className="mt-8 text-center text-xs leading-relaxed text-smoke"
         >
           價格皆含稅、無服務費。外燴方案依配送地點另計車馬費；過敏原與食材來源歡迎現場詢問。
         </Reveal>

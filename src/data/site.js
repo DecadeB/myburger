@@ -23,6 +23,42 @@ export const navLinks = [
   { label: "聯絡我們", href: "#contact" },
 ];
 
+export const heroSlides = [
+  {
+    id: "special",
+    eyebrow: "今日限定 · 每日限量 40 份",
+    title: "煙燻焦糖培根堡",
+    description: "秘製煙燻醬 × 焦糖洋蔥 × 厚切培根，售完即止。",
+    price: "NT$ 320",
+    chip: "現點現煎 · 約 8 分鐘",
+    image: img("photo-1607013251379-e6eecfffe234", 1600),
+    alt: "MyBurger 雙層起司牛肉堡，夾著焦糖洋蔥與融化起司",
+    cta: { label: "立即訂購", href: "#contact" },
+  },
+  {
+    id: "signature",
+    eyebrow: "招牌主打",
+    title: "每日鮮絞牛肉堡",
+    description: "原塊牛肉每日鮮絞，12 小時低溫發酵布里歐，賣完為止。",
+    price: "NT$ 280",
+    chip: "100% 每日鮮絞",
+    image: img("photo-1568901346375-23c9450c58cd", 1600),
+    alt: "布里歐麵包夾著雙層牛肉排與融化起司的招牌漢堡",
+    cta: { label: "看菜單價格", href: "#pricing" },
+  },
+  {
+    id: "duo",
+    eyebrow: "兩個人，剛剛好",
+    title: "雙人分享餐",
+    description: "兩份招牌漢堡＋共享脆薯與煙燻雞翅＋兩杯特調。",
+    price: "NT$ 680",
+    chip: "最受歡迎",
+    image: img("photo-1550547660-d9450f859349", 1600),
+    alt: "兩份現做漢堡與飲品，適合派對分享",
+    cta: { label: "立即訂購", href: "#contact" },
+  },
+];
+
 export const stats = [
   { value: 100, suffix: "%", label: "每日鮮絞牛肉", note: "非預製肉排" },
   { value: 12, suffix: " 小時", label: "布里歐低溫發酵", note: "每日手工烘焙" },

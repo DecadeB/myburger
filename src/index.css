@@ -1,13 +1,23 @@
 @import "tailwindcss";
 
-/* Design tokens only — every visual rule lives in Tailwind utility classes. */
+/* Design tokens only — every visual rule lives in Tailwind utility classes.
+   Palette follows McDonald's Hong Kong design language:
+   red #db0007 / yellow #ffbc0d / charcoal #292929 / grays #f5f5f5–#d6d6d6. */
 @theme {
-  --color-ink: #0b0b0f;
-  --color-cream: #f5f0e6;
-  --color-gold: #c9a84c;
+  --color-paper: #ffffff;
+  --color-cloud: #f5f5f5;
+  --color-mist: #f7f7f7;
+  --color-line: #d6d6d6;
+  --color-charcoal: #292929;
+  --color-smoke: #6f6f6f;
+  --color-ketchup: #db0007;
+  --color-ketchup-deep: #b40006;
+  --color-mustard: #ffbc0d;
+  --color-mustard-soft: #ffcc49;
 
   --font-heading: "Inter", "Noto Sans TC", ui-sans-serif, system-ui, -apple-system, "Microsoft JhengHei", sans-serif;
   --font-body: "Manrope", "Noto Sans TC", ui-sans-serif, system-ui, -apple-system, "Microsoft JhengHei", sans-serif;
 
-  --shadow-lift: 0 24px 60px -24px rgba(0, 0, 0, 0.75);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.14);
 }

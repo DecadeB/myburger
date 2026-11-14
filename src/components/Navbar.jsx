@@ -36,15 +36,11 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
-  const shellVisible = condensed || menuOpen;
-
   return (
     <header
       className={[
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out",
-        shellVisible
-          ? "border-b border-cream/10 bg-ink/85 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent",
+        "fixed inset-x-0 top-0 z-50 bg-paper transition-all duration-500 ease-out",
+        condensed ? "shadow-card" : "border-b border-line",
       ].join(" ")}
     >
       <div
@@ -55,17 +51,17 @@ export default function Navbar() {
       >
         <a
           href="#top"
-          className="group flex items-center gap-3 rounded-full pr-2 text-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+          className="group flex items-center gap-3 rounded-[4px] pr-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ketchup focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
           aria-label="MyBurger 回到頁首"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 text-gold transition-colors duration-300 group-hover:border-gold group-hover:bg-gold/10">
+          <span className="flex h-10 w-10 items-center justify-center rounded-[4px] bg-ketchup text-mustard transition-transform duration-300 group-hover:scale-105 motion-reduce:group-hover:scale-100">
             <BurgerMark className="h-5 w-5" />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-heading text-lg font-semibold tracking-tight">
-              MyBurger<span className="text-gold">.</span>
+            <span className="font-heading text-lg font-bold tracking-tight text-charcoal">
+              MyBurger<span className="text-ketchup">.</span>
             </span>
-            <span className="mt-1 hidden text-[9px] uppercase tracking-[0.32em] text-cream/45 sm:block">
+            <span className="mt-1 hidden text-[9px] font-medium uppercase tracking-[0.3em] text-smoke sm:block">
               Everyday Burger
             </span>
           </span>
@@ -77,7 +73,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="relative py-2 font-heading text-[13px] font-medium tracking-wide text-cream/65 transition-colors duration-300 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:text-cream hover:after:w-full focus-visible:text-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+                  className="relative py-2 font-heading text-[13px] font-semibold tracking-wide text-charcoal/80 transition-colors duration-200 after:absolute after:-bottom-0.5 after:left-0 after:h-[3px] after:w-0 after:rounded-full after:bg-ketchup after:transition-all after:duration-300 hover:text-ketchup hover:after:w-full focus-visible:text-ketchup focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ketchup focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
                 >
                   {link.label}
                 </a>
@@ -97,7 +93,7 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "關閉選單" : "開啟選單"}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-cream/15 text-cream transition-colors duration-300 hover:border-cream/40 hover:bg-cream/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-[4px] border border-line text-charcoal transition-colors duration-200 hover:bg-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ketchup focus-visible:ring-offset-2 focus-visible:ring-offset-paper lg:hidden"
           >
             {menuOpen ? <Close className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -107,21 +103,21 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         className={[
-          "overflow-hidden transition-all duration-500 ease-out lg:hidden",
+          "overflow-hidden border-t border-line bg-paper transition-all duration-500 ease-out lg:hidden",
           menuOpen ? "max-h-[34rem] opacity-100" : "max-h-0 opacity-0",
         ].join(" ")}
       >
         <nav aria-label="行動版導覽" className="mx-auto max-w-7xl px-6 pb-8 pt-2 md:px-10">
-          <ul className="flex flex-col divide-y divide-cream/10 border-y border-cream/10">
+          <ul className="flex flex-col divide-y divide-line">
             {navLinks.map((link, index) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="flex items-center justify-between py-4 font-heading text-base text-cream/85 transition-colors duration-200 hover:text-gold focus-visible:outline-none focus-visible:text-gold"
+                  className="flex items-center justify-between py-4 font-heading text-base font-semibold text-charcoal transition-colors duration-200 hover:text-ketchup focus-visible:outline-none focus-visible:text-ketchup"
                 >
                   {link.label}
-                  <span className="text-[11px] tracking-widest text-cream/30">
+                  <span className="text-[11px] font-medium tracking-widest text-smoke">
                     0{index + 1}
                   </span>
                 </a>
@@ -136,7 +132,7 @@ export default function Navbar() {
           >
             立即訂購
           </Button>
-          <p className="mt-4 text-center text-xs text-cream/40">
+          <p className="mt-4 text-center text-xs text-smoke">
             台北市大安區 · 11:30 – 21:30（週二公休）
           </p>
         </nav>
