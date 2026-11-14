@@ -101,7 +101,7 @@ export default function Footer() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm text-cream/60 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                  className="inline-block py-1 text-sm text-cream/60 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
                 >
                   {link.label}
                 </a>
@@ -119,7 +119,7 @@ export default function Footer() {
             <p>
               <a
                 href={brand.phoneHref}
-                className="transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                className="inline-block py-1 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               >
                 {brand.phone}
               </a>
@@ -127,7 +127,7 @@ export default function Footer() {
             <p>
               <a
                 href={`mailto:${brand.email}`}
-                className="transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                className="inline-block py-1 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               >
                 {brand.email}
               </a>
@@ -158,15 +158,21 @@ export default function Footer() {
             © {year} {brand.name}. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <a href="#top" className="transition-colors duration-300 hover:text-cream/70">
+            <a
+              href="#top"
+              className="inline-block py-1.5 -my-1.5 transition-colors duration-300 hover:text-cream/70"
+            >
               隱私權政策
             </a>
-            <a href="#top" className="transition-colors duration-300 hover:text-cream/70">
+            <a
+              href="#top"
+              className="inline-block py-1.5 -my-1.5 transition-colors duration-300 hover:text-cream/70"
+            >
               服務條款
             </a>
             <a
               href="#top"
-              className="inline-flex items-center gap-1.5 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+              className="inline-flex items-center gap-1.5 py-1.5 -my-1.5 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               回到頂端
               <ArrowUpRight className="h-3.5 w-3.5" />

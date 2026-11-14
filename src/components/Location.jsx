@@ -82,7 +82,7 @@ export default function Location() {
                   <h3 className="font-heading text-sm font-medium text-cream">電話</h3>
                   <a
                     href={brand.phoneHref}
-                    className="mt-1.5 block text-sm text-cream/60 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+                    className="mt-1.5 block py-1 text-sm text-cream/60 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
                   >
                     {brand.phone}
                   </a>
@@ -95,7 +95,7 @@ export default function Location() {
                   <h3 className="font-heading text-sm font-medium text-cream">外燴洽詢</h3>
                   <a
                     href={`mailto:${brand.email}`}
-                    className="mt-1.5 block text-sm text-cream/60 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+                    className="mt-1.5 block py-1 text-sm text-cream/60 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
                   >
                     {brand.email}
                   </a>

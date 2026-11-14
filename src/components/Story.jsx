@@ -115,7 +115,7 @@ export default function Story() {
               訂位專線{" "}
               <a
                 href={brand.phoneHref}
-                className="text-cream/70 underline decoration-cream/25 underline-offset-4 transition-colors hover:text-gold hover:decoration-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+                className="inline-block py-1.5 -my-1.5 text-cream/70 underline decoration-cream/25 underline-offset-4 transition-colors hover:text-gold hover:decoration-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
               >
                 {brand.phone}
               </a>

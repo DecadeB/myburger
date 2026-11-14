@@ -87,7 +87,7 @@ export default function Services() {
                   <div className="mt-7 flex items-center justify-between gap-4">
                     <a
                       href={service.action.href}
-                      className="group/link inline-flex items-center gap-2 font-heading text-sm font-medium text-cream transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+                      className="group/link inline-flex items-center gap-2 py-1.5 -my-1.5 font-heading text-sm font-medium text-cream transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
                     >
                       {service.action.label}
                       <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />

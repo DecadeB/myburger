@@ -85,14 +85,20 @@ export default function Faq() {
             as="a"
             href="#contact"
             delay={140}
-            className="group mt-8 inline-flex items-center gap-2 font-heading text-sm text-cream/70 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+            className="group mt-8 inline-flex items-center gap-2 py-1.5 -my-1.5 font-heading text-sm text-cream/70 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
           >
             還有其他問題？直接問我們
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Reveal>
 
-          <Reveal as="p" delay={180} className="mt-3 text-xs text-cream/35">
-            或來電 {brand.phone}
+          <Reveal as="p" delay={180} className="mt-3 text-xs text-cream/45">
+            或來電{" "}
+            <a
+              href={brand.phoneHref}
+              className="inline-block py-1 -my-1 text-cream/55 transition-colors duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+            >
+              {brand.phone}
+            </a>
           </Reveal>
         </div>
 
