@@ -35,7 +35,7 @@ export default function Hero() {
           onBlur={() => { paused.current = false; }}
           className="relative overflow-hidden rounded-[10px] shadow-card"
         >
-          <div className="h-[440px] sm:h-[480px] lg:h-[560px]" aria-hidden="true" />
+          <div className="h-[308px] sm:h-[336px] lg:h-[392px]" aria-hidden="true" />
 
           {heroSlides.map((item, index) => (
             <div
