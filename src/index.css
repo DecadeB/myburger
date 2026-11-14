@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Design tokens only — every visual rule lives in Tailwind utility classes. */
+@theme {
+  --color-ink: #0b0b0f;
+  --color-cream: #f5f0e6;
+  --color-gold: #c9a84c;
+
+  --font-heading: "Inter", "Noto Sans TC", ui-sans-serif, system-ui, -apple-system, "Microsoft JhengHei", sans-serif;
+  --font-body: "Manrope", "Noto Sans TC", ui-sans-serif, system-ui, -apple-system, "Microsoft JhengHei", sans-serif;
+
+  --shadow-lift: 0 24px 60px -24px rgba(0, 0, 0, 0.75);
+}
